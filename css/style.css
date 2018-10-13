@@ -1,0 +1,111 @@
+@font-face {
+    font-family: LemonMilk;
+    src: url('/source/fonts/LemonMilk/LemonMilkbold.otf');
+}
+body {
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    width: 1600px;
+    display: grid;
+    background: #e6e6e6;
+    grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    overflow: hidden;
+}
+@media all and (min-width: 0) and (max-width: 767px) {
+
+}
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1600px;
+    width: 100%;
+    height: 890px;
+    background: url(../source/img/header-background.jpg), #bc2e3a;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.header-content {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-rows: 870px;
+    width: 100%;
+}
+.header-title {
+    text-align: center;
+    font-family: LemonMilk, sans-serif;
+    position: relative;
+    left: 180px;
+    background: url(../source/img/header-background.jpg) no-repeat;
+    background-size: 211%;
+    background-position: -184px -253px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+.header-title-text1 {
+    width: 522px;
+    height: 126px;
+    font-size: 163px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: .87;
+    letter-spacing: 4.1px;
+    text-align: center;
+}
+.header-title-text2 {
+    width: 641px;
+    height: 77px;
+    font-size: 98.5px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: .8;
+    letter-spacing: 3.9px;
+    text-align: center;
+}
+.header-content .header-image {
+    width: 830px;
+    height: 900px;
+    position: relative;
+    top: 108px;
+    left: -54px;
+}
+.header-image-shade {
+    background: url(../source/img/Shade.png);
+    position: relative;
+    left: -250px;
+    top: -40px;
+    width: 1073px;
+    height: 1011px;
+    mix-blend-mode: hard-light;
+}
+.header-image img {
+    position: relative;
+    top: -1018px;
+    left: -6px;
+    z-index: 3;
+}
+nav {
+    grid-area: nav;
+
+}
+main {
+    grid-area: main;
+}
+@media all and (min-width: 0) and (max-width: 767px) {
+    /* aside {
+        display: none;
+    } */
+}
+footer {
+    grid-area: footer;
+    height: 100px;
+    background: grey;
+}
