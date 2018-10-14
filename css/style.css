@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900');
 @font-face {
     font-family: LemonMilk;
     src: url('/source/fonts/LemonMilk/LemonMilkbold.otf');
@@ -5,11 +6,13 @@
 body {
     margin: 0;
 }
+a {
+    text-decoration: none;
+}
 .container {
     margin: 0 auto;
     width: 1600px;
     display: grid;
-    background: #e6e6e6;
     grid-template-areas:
             "header"
             "main"
@@ -17,17 +20,22 @@ body {
     overflow: hidden;
 }
 @media all and (min-width: 0) and (max-width: 767px) {
-
 }
 header {
     grid-area: header;
     display: grid;
     grid-template-columns: 1600px;
+    grid-template-rows: 90px 800px;
+    align-items: end;
     width: 100%;
     height: 890px;
     background: url(../source/img/header-background.jpg), #bc2e3a;
     background-size: cover;
     background-blend-mode: multiply;
+}
+nav {
+    font-family: Lato, sans-serif;
+    z-index: 999;
 }
 .header-content {
     display: grid;
@@ -36,14 +44,42 @@ header {
     grid-template-rows: 870px;
     width: 100%;
 }
+.header-logo {
+    float: left;
+    font-size: 43.5px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.1px;
+    text-align: left;
+    color: #ffffff;
+    margin-left: 100px;
+}
+.header-menu {
+    float: right;
+    margin-right: 90px;
+}
+.header-menu li {
+    list-style-type: none;
+    margin: 0 10px;
+}
+.header-menu a {
+    display: inline-block;
+    color: #fff;
+}
+.header-menu a:nth-child(8) {
+    margin-left: 30px;
+}
 .header-title {
     text-align: center;
     font-family: LemonMilk, sans-serif;
     position: relative;
-    left: 180px;
+    left: 163px;
+    top: -41px;
     background: url(../source/img/header-background.jpg) no-repeat;
-    background-size: 211%;
-    background-position: -184px -253px;
+    background-size: 208%;
+    background-position: -174px -231px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 2;
@@ -74,30 +110,29 @@ header {
     width: 830px;
     height: 900px;
     position: relative;
-    top: 108px;
-    left: -54px;
+    top: -70px;
+    left: -72px;
 }
 .header-image-shade {
-    background: url(../source/img/Shade.png);
+    background: url(../source/img/Shade.png) no-repeat;
     position: relative;
     left: -250px;
-    top: -40px;
+    top: 66px;
     width: 1073px;
-    height: 1011px;
+    height: 900px;
     mix-blend-mode: hard-light;
 }
 .header-image img {
     position: relative;
-    top: -1018px;
-    left: -6px;
+    top: -763px;
+    left: -4px;
     z-index: 3;
-}
-nav {
-    grid-area: nav;
-
 }
 main {
     grid-area: main;
+}
+.who-we-are {
+    height: 575px;
 }
 @media all and (min-width: 0) and (max-width: 767px) {
     /* aside {
