@@ -247,7 +247,7 @@ main {
     position: relative;
     top: -350px;
     left: 210px;
-    z-index: 1;
+    z-index: 2;
 }
 .how-we-works-title {
     font-family: PeaceSans,sans-serif;
@@ -338,6 +338,7 @@ main {
     padding: 100px 100px 0;
     background-color: #f5f5f5;
     position: relative;
+    z-index: 1;
 }
 .oct-background {
     width: 215px;
@@ -445,6 +446,18 @@ main {
 }
 .what-client-says {
     padding: 90px 180px;
+    position: relative;
+}
+.wcs-background1 {
+    position: absolute;
+    width: 314px;
+    height: 1183px;
+    background: url(../source/img/background/Rectangle6.png) no-repeat;
+    right: 0;
+    top: -593px;
+}
+.wcs-background2 {
+
 }
 .wcs-title {
     font-family: PeaceSans, sans-serif;
