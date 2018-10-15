@@ -154,6 +154,8 @@ main {
     z-index: 1;
     display: grid;
     grid-template-columns: 480px 1fr;
+    background: url(../source/img/background/Rectangle1.png) no-repeat;
+    background-position-x: 512px;
 }
 .who-we-are-title {
     font-family: PeaceSans, sans-serif;
