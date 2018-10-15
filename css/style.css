@@ -457,7 +457,13 @@ main {
     top: -593px;
 }
 .wcs-background2 {
-
+    position: absolute;
+    width: 473px;
+    height: 965px;
+    background: url(../source/img/background/Rectangle7.png) no-repeat;
+    left: 0;
+    top: -65px;
+    z-index: 1;
 }
 .wcs-title {
     font-family: PeaceSans, sans-serif;
@@ -473,6 +479,9 @@ main {
 .wcs-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+.wcs-content img {
+    z-index: 10;
 }
 .wcs-comment blockquote {
     margin-left: 100px;
