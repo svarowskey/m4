@@ -547,9 +547,18 @@ main {
 }
 footer {
     grid-area: footer;
+    position: relative;
     background: url(../source/img/background/footer-background.jpg) no-repeat;
     background-size: cover;
     padding: 80px 200px;
+}
+.footer-back {
+    position: absolute;
+    width: 309px;
+    height: 174px;
+    background: url(../source/img/background/Rectangle8.png) no-repeat;
+    right: 0;
+    bottom: 0;
 }
 .footer-title {
     font-family: PeaceSans, sans-serif;
