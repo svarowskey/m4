@@ -239,6 +239,15 @@ main {
 .how-we-works {
     padding: 115px 210px 200px;
 }
+.hww-background {
+    width: 574px;
+    height: 1183px;
+    background: url(../source/img/background/Rectangle3.png) no-repeat;
+    float: right;
+    position: relative;
+    top: -350px;
+    left: 210px;
+}
 .how-we-works-title {
     font-family: PeaceSans,sans-serif;
     font-size: 62px;
