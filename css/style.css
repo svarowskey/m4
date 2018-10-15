@@ -247,6 +247,7 @@ main {
     position: relative;
     top: -350px;
     left: 210px;
+    z-index: 1;
 }
 .how-we-works-title {
     font-family: PeaceSans,sans-serif;
@@ -284,6 +285,7 @@ main {
     height: 298px;
     position: relative;
     left: -32px;
+    z-index: 999;
 }
 .hww-block1-title {
     position: relative;
@@ -335,6 +337,15 @@ main {
 .our-creative-team {
     padding: 100px 100px 0;
     background-color: #f5f5f5;
+    position: relative;
+}
+.oct-background {
+    width: 215px;
+    height: 1183px;
+    background: url(../source/img/background/Rectangle4.png);
+    position: absolute;
+    left: 0px;
+    top: 232px;
 }
 .oct-title {
     font-family: PeaceSans, sans-serif;
