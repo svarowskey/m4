@@ -57,7 +57,6 @@ a {
 header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 1600px;
   grid-template-rows: 90px 800px;
   align-items: end;
   width: 100%;
@@ -112,12 +111,15 @@ header {
       position: relative;
       left: 163px;
       top: 14px;
+      /*
       background: url(../source/img/background/header-background.jpg) no-repeat;
-      background-size: 205%;
-      background-position: -163px -235px;
+      background-size: calc(175%);
+      background-position: 19% 39%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       z-index: 2;
+      */
+      color: #fff;
 
       .header-title-text1 {
         font-size: 163px;
@@ -193,11 +195,12 @@ main {
     overflow: hidden;
     z-index: 1;
     display: grid;
-    grid-template-columns: 480px 1fr;
+    grid-template-columns: 2fr 3fr;
     background: url(../source/img/background/Rectangle1.png) no-repeat;
-    background-position-x: 512px;
+    background-position-x: right;
 
     .who-we-are-block-text {
+      justify-self: start;
       .who-we-are-title {
         @include section-title;
         margin-bottom: 38px;
@@ -221,6 +224,10 @@ main {
         margin-top: 50px;
       }
     }
+
+    & img {
+      justify-self: end;
+    }
   }
 
   .what-we-do {
@@ -231,12 +238,12 @@ main {
     .what-we-do-title {
       @include section-title;
       text-align: center;
+      margin-bottom: 70px;
     }
 
     .what-we-do-content {
       display: grid;
-      grid-template-columns: 360px 360px 360px;
-      grid-template-rows: 180px 180px;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 70px 60px;
 
       & img {
@@ -268,16 +275,18 @@ main {
   }
 
   .how-we-works {
-    padding: 115px 210px 200px;
+    padding: 115px 0 200px 210px;
+    overflow: hidden;
+    position: relative;
 
     .hww-background {
       width: 574px;
       height: 1183px;
       background: url(../source/img/background/Rectangle3.png) no-repeat;
       float: right;
-      position: relative;
-      top: -350px;
-      left: 210px;
+      position: absolute;
+      top: -220px;
+      right: 0;
       z-index: 2;
     }
 
@@ -288,7 +297,7 @@ main {
 
     .how-we-works-content {
       display: grid;
-      grid-template-columns: 300px 300px 300px 300px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-column-gap: 60px;
 
       .how-we-works-block-text {
@@ -297,6 +306,7 @@ main {
           font-size: 17px;
           line-height: 1.76;
           color: #6a6a6a;
+          text-align: justify;
         }
 
         & button {
@@ -306,11 +316,12 @@ main {
       }
 
       & a {
-        width: 515px;
+        width: 457px;
         height: 298px;
-        position: relative;
-        left: -32px;
-        z-index: 999;
+      }
+
+      & a:last-child {
+        width: 310px;
       }
 
       .hww-block1-title {
@@ -330,7 +341,7 @@ main {
       }
       .hww-block1-img {
         background: url(../source/img/hww-img-block1.png) no-repeat;
-        background-position: 3px -23px;
+        background-position: -30px -23px;
         z-index: 10;
       }
       .hww-block2-title {
@@ -340,17 +351,17 @@ main {
       }
       .hww-block2-img {
         background: url("../source/img/hww-img-block2.png") no-repeat;
-        background-position: 3px -23px;
+        background-position: -30px -23px;
         z-index: 10;
       }
       .hww-block3-title {
         position: relative;
         top: 202px;
-        left: -102px;
+        left: -10px;
       }
       .hww-block3-img {
         background: url("../source/img/hww-img-block3.png") no-repeat;
-        background-position: 3px -23px;
+        background-position: -30px -23px;
         z-index: 10;
       }
       .hww-block1-title,
@@ -383,16 +394,20 @@ main {
 
     .oct-title {
       @include section-title;
-      margin-bottom: 0;
+      margin-left: 100px;
     }
 
     .oct-content {
       display: grid;
-      grid-template-columns: 50px 375px 550px 375px 50px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       align-items: center;
 
       & a {
         z-index: 20;
+      }
+
+      & a:last-child {
+        justify-self: end;
       }
 
       .oct-left {

@@ -21,7 +21,6 @@ a {
 header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 1600px;
   grid-template-rows: 90px 800px;
   align-items: end;
   width: 100%;
@@ -63,12 +62,15 @@ header {
       position: relative;
       left: 163px;
       top: 14px;
+      /*
       background: url(../source/img/background/header-background.jpg) no-repeat;
-      background-size: 205%;
-      background-position: -163px -235px;
+      background-size: calc(175%);
+      background-position: 19% 39%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      z-index: 2; }
+      z-index: 2;
+      */
+      color: #fff; }
       header .header-content .header-title .header-title-text1 {
         font-size: 163px;
         font-weight: bold;
@@ -128,43 +130,47 @@ main {
     overflow: hidden;
     z-index: 1;
     display: grid;
-    grid-template-columns: 480px 1fr;
+    grid-template-columns: 2fr 3fr;
     background: url(../source/img/background/Rectangle1.png) no-repeat;
-    background-position-x: 512px; }
-    main .who-we-are .who-we-are-block-text .who-we-are-title {
-      font-family: PeaceSans, sans-serif;
-      font-size: 62px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      margin-top: 0;
-      color: #494949;
-      margin-bottom: 38px; }
-    main .who-we-are .who-we-are-block-text .who-we-are-text {
-      font-family: OpenSans, sans-serif;
-      font-size: 17px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.76;
-      letter-spacing: normal;
-      text-align: left;
-      color: #6a6a6a;
-      margin-left: 14px; }
-    main .who-we-are .who-we-are-block-text > button {
-      width: 192px;
-      height: 54px;
-      border-radius: 30px;
-      box-shadow: -3.5px 11.5px 40px 0 rgba(0, 1, 1, 0.2);
-      background-color: #bc2e3a;
-      font-family: Lato, sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      letter-spacing: .5px;
-      color: #ffffff;
-      margin-top: 50px; }
+    background-position-x: right; }
+    main .who-we-are .who-we-are-block-text {
+      justify-self: start; }
+      main .who-we-are .who-we-are-block-text .who-we-are-title {
+        font-family: PeaceSans, sans-serif;
+        font-size: 62px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        margin-top: 0;
+        color: #494949;
+        margin-bottom: 38px; }
+      main .who-we-are .who-we-are-block-text .who-we-are-text {
+        font-family: OpenSans, sans-serif;
+        font-size: 17px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.76;
+        letter-spacing: normal;
+        text-align: left;
+        color: #6a6a6a;
+        margin-left: 14px; }
+      main .who-we-are .who-we-are-block-text > button {
+        width: 192px;
+        height: 54px;
+        border-radius: 30px;
+        box-shadow: -3.5px 11.5px 40px 0 rgba(0, 1, 1, 0.2);
+        background-color: #bc2e3a;
+        font-family: Lato, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: .5px;
+        color: #ffffff;
+        margin-top: 50px; }
+    main .who-we-are img {
+      justify-self: end; }
   main .what-we-do {
     padding: 90px 200px;
     background: url(../source/img/background/Rectangle2.png) no-repeat, #f5f5f5;
@@ -179,11 +185,11 @@ main {
       letter-spacing: normal;
       margin-top: 0;
       color: #494949;
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 70px; }
     main .what-we-do .what-we-do-content {
       display: grid;
-      grid-template-columns: 360px 360px 360px;
-      grid-template-rows: 180px 180px;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 70px 60px; }
       main .what-we-do .what-we-do-content img {
         float: left; }
@@ -206,15 +212,17 @@ main {
         text-align: left;
         color: #6a6a6a; }
   main .how-we-works {
-    padding: 115px 210px 200px; }
+    padding: 115px 0 200px 210px;
+    overflow: hidden;
+    position: relative; }
     main .how-we-works .hww-background {
       width: 574px;
       height: 1183px;
       background: url(../source/img/background/Rectangle3.png) no-repeat;
       float: right;
-      position: relative;
-      top: -350px;
-      left: 210px;
+      position: absolute;
+      top: -220px;
+      right: 0;
       z-index: 2; }
     main .how-we-works .how-we-works-title {
       font-family: PeaceSans, sans-serif;
@@ -229,13 +237,14 @@ main {
       margin-bottom: 30px; }
     main .how-we-works .how-we-works-content {
       display: grid;
-      grid-template-columns: 300px 300px 300px 300px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-column-gap: 60px; }
       main .how-we-works .how-we-works-content .how-we-works-block-text p {
         font-family: OpenSans, sans-serif;
         font-size: 17px;
         line-height: 1.76;
-        color: #6a6a6a; }
+        color: #6a6a6a;
+        text-align: justify; }
       main .how-we-works .how-we-works-content .how-we-works-block-text button {
         width: 192px;
         height: 54px;
@@ -249,11 +258,10 @@ main {
         color: #ffffff;
         margin-top: 20px; }
       main .how-we-works .how-we-works-content a {
-        width: 515px;
-        height: 298px;
-        position: relative;
-        left: -32px;
-        z-index: 999; }
+        width: 457px;
+        height: 298px; }
+      main .how-we-works .how-we-works-content a:last-child {
+        width: 310px; }
       main .how-we-works .how-we-works-content .hww-block1-title {
         position: relative;
         top: 105px;
@@ -269,7 +277,7 @@ main {
         left: 116px; }
       main .how-we-works .how-we-works-content .hww-block1-img {
         background: url(../source/img/hww-img-block1.png) no-repeat;
-        background-position: 3px -23px;
+        background-position: -30px -23px;
         z-index: 10; }
       main .how-we-works .how-we-works-content .hww-block2-title {
         position: relative;
@@ -277,15 +285,15 @@ main {
         left: -102px; }
       main .how-we-works .how-we-works-content .hww-block2-img {
         background: url("../source/img/hww-img-block2.png") no-repeat;
-        background-position: 3px -23px;
+        background-position: -30px -23px;
         z-index: 10; }
       main .how-we-works .how-we-works-content .hww-block3-title {
         position: relative;
         top: 202px;
-        left: -102px; }
+        left: -10px; }
       main .how-we-works .how-we-works-content .hww-block3-img {
         background: url("../source/img/hww-img-block3.png") no-repeat;
-        background-position: 3px -23px;
+        background-position: -30px -23px;
         z-index: 10; }
       main .how-we-works .how-we-works-content .hww-block1-title,
       main .how-we-works .how-we-works-content .hww-block2-title,
@@ -318,13 +326,15 @@ main {
       letter-spacing: normal;
       margin-top: 0;
       color: #494949;
-      margin-bottom: 0; }
+      margin-left: 100px; }
     main .our-creative-team .oct-content {
       display: grid;
-      grid-template-columns: 50px 375px 550px 375px 50px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       align-items: center; }
       main .our-creative-team .oct-content a {
         z-index: 20; }
+      main .our-creative-team .oct-content a:last-child {
+        justify-self: end; }
       main .our-creative-team .oct-content .oct-left {
         position: relative;
         left: 120px;
